@@ -30,7 +30,7 @@ class Movie < ActiveRecord::Base
 
     def update_with_attributes(id,title)
         allmembers=Movie.find_by(id:id)
-        allmembers.update(title:title)
+        allmembers.update_attribute(title:title)
 
     end
     def self.update_all_titles(name)
